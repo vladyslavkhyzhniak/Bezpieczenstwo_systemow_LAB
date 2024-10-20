@@ -12,6 +12,7 @@ public class SzyfrCezaraEncrypt
 
     public string Encrypt()
     {
+        step = step % 35;
         if (step<0)
         {
             step += 35;
