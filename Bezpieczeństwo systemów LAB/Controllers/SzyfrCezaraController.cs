@@ -10,7 +10,7 @@ public class SzyfrCezaraController : Controller
         return View();
     }
 
-    public IActionResult Result(SzyfrCezaraEncrypt model)
+    public IActionResult Result(SzyfrCezara model)
     {
         if (!model.IsValid())
         {

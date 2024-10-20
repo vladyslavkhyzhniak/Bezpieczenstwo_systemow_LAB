@@ -1,10 +1,32 @@
-﻿@model SzyfrCezaraEncrypt
+﻿@model SzyfrCezara
 
 @{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
+ViewBag.Title = "Szyfr Cezara";
+Layout = "_Layout";
 }
-<div>Wynik:</div>
-<div id="result" class="alert alert-secondary text-break" role="alert">
-    @Model.Encrypt()
+
+<div class="container mt-5">
+    <h1 class="text-center">Szyfr Cezara</h1>
+
+    <div class="mb-3">
+        <div>Tekst:</div>
+        <div class="alert alert-secondary text-break" >@Model.text</div>
+    </div>
+
+    <div class="mb-3">
+        <div>Klucz (przesunięcie):</div>
+        <div class="alert alert-secondary text-break">@Model.step</div>
+    </div>
+
+    <h2>Wynik:</h2>
+    <div id="result" class="alert alert-secondary text-break" role="alert">
+        @if (Model.method == MethodsEnum.Encrypt.ToString())
+        {
+        @Model.Encrypt()
+        }
+        else
+        {
+        @Model.Decrypt()
+        }
+    </div>
 </div>
