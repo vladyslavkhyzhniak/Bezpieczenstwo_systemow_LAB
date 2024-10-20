@@ -29,4 +29,17 @@ Layout = "_Layout";
         @Model.Decrypt()
         }
     </div>
+    <button id="copyButton" class="btn btn-primary mt-3">Kopiuj wynik</button>
 </div>
+<script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+        var resultText = document.getElementById('result').innerText;
+        var textarea = document.createElement('textarea');
+        textarea.value = resultText;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+
+        document.body.removeChild(textarea);
+    });
+</script>
