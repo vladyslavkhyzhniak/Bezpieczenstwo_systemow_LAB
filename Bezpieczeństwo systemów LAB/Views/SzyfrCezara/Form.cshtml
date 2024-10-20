@@ -1,25 +1,21 @@
 ﻿<div class="container">
     <h1 class="text-center">Szyfr Cezara</h1>
-
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form>
+            <form action="Result" method="GET">
                 <div class="form-group">
                     <label for="tekst">Wpisz tekst:</label>
-                <textarea type="" class="form-control" id="tekst" cols="30" rows="6" name="tekst">
-                </textarea>
+                    <textarea type="" class="form-control" id="tekst" cols="30" rows="6" name="text"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="klucz">Przesunięcie:</label>
-                    <input type="number" class="form-control mb-3" id="klucz" value="3" name="klucz">
+                    <label for="klucz">Klucz:</label>
+                    <input type="number" class="form-control mb-0" id="klucz" value="3" name="step">
+                    <small class="form-text mt-0 text-muted">0 - brak przesunięcia</small>
                 </div>
-                <button type="submit" class="btn btn-primary" >Zaszyfruj</button>
+                <button type="submit" class="btn btn-primary">Zaszyfruj</button>
                 <button type="submit" class="btn btn-secondary">Odszyfruj</button>
             </form>
-            <div>Wynik:</div>
-            <div id="result" class="alert alert-secondary text-wrap " role="alert">
-                
-            </div>
+
         </div>
     </div>
 </div>

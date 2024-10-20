@@ -1,0 +1,10 @@
+﻿@model SzyfrCezaraEncrypt
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<div>Wynik:</div>
+<div id="result" class="alert alert-secondary text-break" role="alert">
+    @Model.Encrypt()
+</div>
