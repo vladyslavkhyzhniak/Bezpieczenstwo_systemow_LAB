@@ -21,7 +21,7 @@ public class SzyfrCezara
         }
         string result = null;
 
-        string Clearedtext = string.Join("", text.Split(' ')).ToLower();
+        string Clearedtext = string.Join("", text.Where(c => char.IsLetterOrDigit(c))).ToLower();
 
         for (int i = 0; i < Clearedtext.Length; i++)
         {
